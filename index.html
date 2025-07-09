@@ -5,8 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profil Keren Gue</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     :root {
       --bg-color: #f0f0f0;
@@ -100,6 +101,23 @@
       background: #ccc;
     }
 
+    .gallery img {
+      width: 100px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
     @media (max-width: 600px) {
       .profile-pic {
         width: 100px;
@@ -114,7 +132,7 @@
     <button class="dark-toggle" id="darkToggle"><i class="fas fa-moon"></i></button>
     <h1 data-aos="fade-down">Salman Alzikri</h1>
     <p data-aos="fade-up">Web Developer | Mahasiswa Informatika</p>
-    <img src="salman.jpg" alt="Foto Profil" class="profile-pic" data-aos="zoom-in">
+    <img src="salman.jpg" alt="Foto Profil" class="profile-pic" data-aos="zoom-in" />
   </header>
 
   <section class="container" data-aos="fade-up">
@@ -122,37 +140,37 @@
     <p>Gue mahasiswa informatika yang suka ngoding, desain, dan bikin project keren. Fokus gua sekarang ke web development, dari front-end sampai back-end.</p>
   </section>
 
-<section class="container" data-aos="fade-right">
-  <h2>Hubungi Gue</h2>
-  <form action="https://formspree.io/f/your_form_id" method="POST">
-    <input type="text" name="nama" placeholder="Nama lo" required>
-    <input type="email" name="email" placeholder="Email lo" required>
-    <textarea name="pesan" placeholder="Pesan lo..." rows="5" required></textarea>
-    <button type="submit" class="btn">Kirim Pesan</button>
-  </form>
   <section class="container" data-aos="fade-up">
-  <h2>Galeri Project</h2>
-  <div class="gallery">
-    <img src="salman.jpg" alt="Project 1">
-    <img src="salman.jpg" alt="Project 2">
-    <img src="salman.jpg" alt="Project 3">
-  </div>
-</section>
+    <h2>Galeri Project</h2>
+    <div class="gallery">
+      <img src="salman.jpg" alt="Project 1">
+      <img src="salman.jpg" alt="Project 2">
+      <img src="salman.jpg" alt="Project 3">
+    </div>
+  </section>
 
-  <section class="container" data-aos="fade-right">
+  <section class="container" data-aos="fade-up">
+    <h2>Project Gue</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Website Portofolio</h3>
+        <p>Website HTML, CSS, dan JS untuk profil pribadi.</p>
+      </div>
+      <div class="project-item">
+        <h3>Aplikasi e-Health</h3>
+        <p>Project aplikasi rekam medis digital untuk rumah sakit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" data-aos="fade-up">
     <h2>Hubungi Gue</h2>
-    <section class="container" data-aos="fade-up">
-  <h2>Project Gue</h2>
-  <div class="project-list">
-    <div class="project-item">
-      <h3>Website Portofolio</h3>
-      <p>Website HTML, CSS, dan JS untuk profil pribadi.</p>
-    </div>
-    <div class="project-item">
-      <h3>Aplikasi e-Health</h3>
-      <p>Project aplikasi rekam medis digital untuk rumah sakit.</p>
-    </div>
-  </div>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <input type="text" name="nama" placeholder="Nama lo" required />
+      <input type="email" name="email" placeholder="Email lo" required />
+      <textarea name="pesan" placeholder="Pesan lo..." rows="5" required></textarea>
+      <button type="submit" class="btn">Kirim Pesan</button>
+    </form>
     <p>Email: <a href="mailto:salman@example.com">salman@example.com</a></p>
     <div class="social-icons">
       <a href="https://instagram.com/username" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -165,14 +183,32 @@
     <p>© 2025 Salman Alzikri | Dibuat dengan semangat dan kopi ☕</p>
   </footer>
 
+  <!-- Tombol WhatsApp -->
+  <a href="https://wa.me/6283180051179" target="_blank" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+  ">
+    <i class="fab fa-whatsapp"></i> Chat WA
+  </a>
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-
     const toggle = document.getElementById('darkToggle');
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark');
-      toggle.innerHTML = document.body.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      toggle.innerHTML = document.body.classList.contains('dark')
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
     });
   </script>
 </body>
